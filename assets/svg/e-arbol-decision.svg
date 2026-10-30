@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+<title id="t">Tercerización de transporte: cambio de proveedor descartado</title>
+<desc id="d">Árbol de decisión hecho de carreteras: los trailers que intentan cambiar de proveedor se topan con una barrera de costo (C1 mayor que C0) y otra legal (viabilidad cero); el trailer del proveedor actual sigue recto.</desc>
+<style>.ed{animation:e-dl 1s linear infinite}
+@keyframes e-dl{to{stroke-dashoffset:-16}}
+.er{display:none}
+@media (prefers-reduced-motion:reduce){.ed{animation:none}.em{display:none}.er{display:inline}.eb{filter:none}}</style>
+<defs>
+<filter id="e-f" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="1" result="n"><animate attributeName="seed" values="2;6;10;4" dur=".9s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<pattern id="e-x" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V7M0 0H7" stroke="#141413" stroke-width="1" fill="none"/></pattern>
+<pattern id="e-r" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V7M0 0H7" stroke="#D8231E" stroke-width="1.1" fill="none"/></pattern>
+<pattern id="e-st" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="10" fill="#D8231E"/><rect x="5" width="5" height="10" fill="#F4F1EA"/></pattern>
+<g id="e-tl">
+<rect x="-71" y="-10" width="96" height="26" rx="2" fill="#141413" opacity=".25"/>
+<g fill="#141413"><rect x="-66" y="-17" width="18" height="4" rx="1.5"/><rect x="-66" y="13" width="18" height="4" rx="1.5"/><rect x="-44" y="-17" width="18" height="4" rx="1.5"/><rect x="-44" y="13" width="18" height="4" rx="1.5"/><rect x="36" y="-16" width="11" height="4" rx="1.5"/><rect x="36" y="12" width="11" height="4" rx="1.5"/></g>
+<rect x="-74" y="-13" width="96" height="26" rx="2" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+<rect x="-74" y="2" width="96" height="11" fill="url(#e-x)"/>
+<path d="M-56 -13V13M-38 -13V13M-20 -13V13M-2 -13V13M16 -13V13" stroke="#141413" stroke-width="1" opacity=".4"/>
+<rect x="-74" y="-2" width="96" height="4" fill="currentColor"/>
+<rect x="22" y="-4" width="10" height="8" fill="#141413"/>
+<path d="M32 -12H52Q58 -12 58 -6V6Q58 12 52 12H32Z" fill="currentColor" stroke="#141413" stroke-width="2"/>
+<path d="M50 -8L55 -6V6L50 8Z" fill="#F4F1EA"/>
+</g>
+<g id="e-xs"><circle cx="3" cy="4" r="20" fill="#141413" opacity=".22"/><circle r="20" fill="#F4F1EA" stroke="#D8231E" stroke-width="3"/><path d="M-9 -9L9 9M9 -9L-9 9" stroke="#D8231E" stroke-width="5" fill="none"/></g>
+<g id="e-t1"><rect x="420" y="58" width="118" height="28" fill="#F4F1EA" stroke="#D8231E" stroke-width="2"/><text x="479" y="78" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#D8231E">C<tspan dy="4" font-size="11">1</tspan><tspan dy="-4"> &gt; C</tspan><tspan dy="4" font-size="11">0</tspan></text><use href="#e-xs" x="663" y="120"/></g>
+<g id="e-t2"><rect x="420" y="414" width="118" height="28" fill="#F4F1EA" stroke="#141413" stroke-width="2"/><text x="479" y="434" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#141413">V = 0</text><use href="#e-xs" x="663" y="380"/></g>
+<g id="e-ck"><path d="M722 250L732 261L748 238" fill="none" stroke="#141413" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</defs>
+<g class="eb" filter="url(#e-f)">
+<g fill="none"><g transform="translate(3 4)" stroke="#141413" stroke-width="38" opacity=".2"><path d="M30 250H250"/><path d="M250 250V150Q250 120 280 120H610"/><path d="M250 250V350Q250 380 280 380H610"/><path d="M250 250H700"/></g>
+<g stroke="#141413" stroke-width="38"><path d="M30 250H250"/><path d="M250 250V150Q250 120 280 120H610"/><path d="M250 250V350Q250 380 280 380H610"/><path d="M250 250H700"/></g>
+<g stroke="#F4F1EA" stroke-width="34"><path d="M30 250H250"/><path d="M250 250V150Q250 120 280 120H610"/><path d="M250 250V350Q250 380 280 380H610"/><path d="M250 250H700"/></g></g>
+<g transform="translate(3 4)" fill="#141413" opacity=".22"><rect x="626" y="92" width="74" height="56"/><rect x="626" y="352" width="74" height="56"/><rect x="712" y="228" width="44" height="44"/></g>
+<rect x="626" y="92" width="74" height="56" fill="url(#e-r)" stroke="#D8231E" stroke-width="2"/>
+<rect x="626" y="352" width="74" height="56" fill="url(#e-x)" stroke="#141413" stroke-width="2"/>
+<rect x="712" y="228" width="44" height="44" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+<g fill="#141413"><rect x="512" y="94" width="16" height="10"/><rect x="512" y="136" width="16" height="10"/><rect x="512" y="354" width="16" height="10"/><rect x="512" y="396" width="16" height="10"/></g>
+<rect x="516" y="104" width="8" height="32" fill="url(#e-st)" stroke="#141413" stroke-width="1.5"/>
+<rect x="516" y="364" width="8" height="32" fill="url(#e-st)" stroke="#141413" stroke-width="1.5"/>
+<g fill="#F4F1EA" stroke="#141413" stroke-width="2"><circle cx="566" cy="120" r="14"/><circle cx="566" cy="380" r="14"/></g>
+<g font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18" font-weight="700" fill="#D8231E" text-anchor="middle"><text x="566" y="126">$</text><text x="566" y="386">§</text></g>
+</g>
+<g class="ed" fill="none" stroke="#141413" stroke-width="1.6" stroke-dasharray="8 8"><path d="M30 250H250"/><path d="M250 250V150Q250 120 280 120H610"/><path d="M250 250V350Q250 380 280 380H610"/><path d="M250 250H700"/></g>
+<g class="em">
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.28;.32;.97;1" dur="10s" repeatCount="indefinite"/><use href="#e-t1"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.58;.62;.97;1" dur="10s" repeatCount="indefinite"/><use href="#e-t2"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.8;.84;.97;1" dur="10s" repeatCount="indefinite"/><use href="#e-ck"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.03;.36;.4;1" dur="10s" repeatCount="indefinite"/><animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.3;1" path="M20 250H250V150Q250 120 280 120H440"/><use href="#e-tl" transform="scale(.62)" color="#D8231E"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.32;.35;.66;.7;1" dur="10s" repeatCount="indefinite"/><animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;.32;.6;1" path="M20 250H250V350Q250 380 280 380H440"/><use href="#e-tl" transform="scale(.62)" color="#D8231E"/></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.62;.65;.97;1" dur="10s" repeatCount="indefinite"/><animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;.62;.97;1" path="M20 250H780"/><use href="#e-tl" transform="scale(.62)" color="#141413"/></g>
+</g>
+<g class="er">
+<use href="#e-t1"/><use href="#e-t2"/><use href="#e-ck"/>
+<use href="#e-tl" transform="translate(440 120) scale(.62)" color="#D8231E" opacity=".4"/>
+<use href="#e-tl" transform="translate(440 380) scale(.62)" color="#D8231E" opacity=".4"/>
+<use href="#e-tl" transform="translate(500 250) scale(.62)" color="#141413"/>
+</g>
+</svg>

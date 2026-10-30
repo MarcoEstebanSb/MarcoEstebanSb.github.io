@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+<title id="t">Camiones y punto de equilibrio</title>
+<desc id="d">Dos camiones de carga vistos desde arriba dejan huellas de tinta que dibujan las curvas de ingresos y costos; se cruzan en el punto de equilibrio.</desc>
+<style>.cr{display:none}
+@media (prefers-reduced-motion:reduce){.cm{display:none}.cr{display:inline}.cb{filter:none}}</style>
+<defs>
+<filter id="c-f" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="1" result="n"><animate attributeName="seed" values="3;7;11;5" dur=".9s" calcMode="discrete" repeatCount="indefinite"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+<pattern id="c-x" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V6M0 0H6" stroke="#141413" stroke-width="1.1" fill="none"/></pattern>
+<pattern id="c-r" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V6M0 0H6" stroke="#D8231E" stroke-width="1.2" fill="none"/></pattern>
+<g id="c-wc"><rect x="-35" y="-12" width="76" height="30" rx="3" fill="#141413" opacity=".25"/><g fill="#141413"><rect x="-30" y="-18" width="14" height="5" rx="1.5"/><rect x="-30" y="13" width="14" height="5" rx="1.5"/><rect x="14" y="-17" width="12" height="5" rx="1.5"/><rect x="14" y="12" width="12" height="5" rx="1.5"/></g></g>
+<g id="c-cab"><path d="M16 -13H32Q38 -13 38 -7V7Q38 13 32 13H16Z" fill="currentColor" stroke="#141413" stroke-width="2"/><path d="M29 -8L34 -6V6L29 8Z" fill="#F4F1EA"/><path d="M24 -18h5v3h-5zM24 15h5v3h-5z" fill="#141413"/></g>
+<g id="c-tk"><use href="#c-wc"/><rect x="-38" y="-15" width="52" height="30" rx="2" fill="#F4F1EA" stroke="#141413" stroke-width="2"/><rect x="-38" y="2" width="52" height="13" fill="url(#c-x)"/><path d="M-26 -15V15M-12 -15V15" stroke="#141413" stroke-width="1" opacity=".45"/><use href="#c-cab"/></g>
+<g id="c-fb"><use href="#c-wc"/><rect x="-38" y="-15" width="52" height="30" rx="2" fill="#F4F1EA" stroke="#141413" stroke-width="2"/><rect x="-34" y="-11" width="15" height="22" fill="url(#c-x)" stroke="#141413" stroke-width="1.6"/><rect x="-16" y="-11" width="14" height="22" fill="#F4F1EA" stroke="#141413" stroke-width="1.6"/><path d="M-16 -11L-2 11M-2 -11L-16 11" stroke="#141413" stroke-width="1"/><rect x="1" y="-11" width="11" height="22" fill="#141413" stroke="#141413" stroke-width="1.6"/><use href="#c-cab"/></g>
+<g id="c-pe"><path d="M509 258V440" fill="none" stroke="#D8231E" stroke-width="1.6" stroke-dasharray="5 5"/><circle cx="509" cy="440" r="4.5" fill="#D8231E"/><circle cx="509" cy="240" r="15" fill="#F4F1EA" stroke="#141413" stroke-width="2.4"/><circle cx="509" cy="240" r="5" fill="#D8231E"/></g>
+</defs>
+<g class="cb" filter="url(#c-f)">
+<path d="M110 340H740M110 240H740M110 140H740M110 40H740" fill="none" stroke="#141413" stroke-width="1" stroke-dasharray="3 6" opacity=".16"/>
+<g transform="translate(512 244)"><polygon points="0,-48 15,-40 33,-37 42,-22 51,-7 40,7 48,24 31,33 22,48 4,40 -15,50 -29,35 -46,31 -40,13 -50,-4 -37,-18 -42,-35 -22,-37 -11,-50" fill="#141413" opacity=".22"/></g>
+<g transform="translate(509 240)"><polygon points="0,-48 15,-40 33,-37 42,-22 51,-7 40,7 48,24 31,33 22,48 4,40 -15,50 -29,35 -46,31 -40,13 -50,-4 -37,-18 -42,-35 -22,-37 -11,-50" fill="#D8231E"/><polygon points="-50,-4 -37,-18 -42,-35 -22,-37 -11,-50 0,-48 0,0 -40,13" fill="url(#c-x)" opacity=".5"/></g>
+<path d="M110 40V440H762" fill="none" stroke="#141413" stroke-width="2.4"/>
+<path d="M110 440H740M110 440V60" fill="none" stroke="#141413" stroke-width="9" stroke-dasharray="1.6 88.4" opacity=".5"/>
+<path d="M102 48L110 30L118 48ZM750 432L768 440L750 448Z" fill="#141413"/>
+<text x="124" y="42" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" fill="#141413">$</text>
+<text x="744" y="424" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" fill="#141413">Q</text>
+</g>
+<g class="cm">
+<g opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.04;.93;1" dur="10s" repeatCount="indefinite"/>
+<g fill="none" stroke-dasharray="1 2" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" values="1;.364;0;0" keyTimes="0;.45;.88;1" dur="10s" repeatCount="indefinite"/><path pathLength="1" d="M110 440C260 436 420 330 705 70" stroke="url(#c-x)" stroke-width="16"/><path pathLength="1" d="M110 440C260 436 420 330 705 70" stroke="#141413" stroke-width="2"/></g>
+<g><animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;.636;1;1" keyTimes="0;.45;.88;1" path="M110 440C260 436 420 330 705 70"/><use href="#c-tk" transform="scale(.95)" color="#141413"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.12;.16;.94;1" dur="10s" repeatCount="indefinite"/>
+<g fill="none" stroke-dasharray="1 2" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" values="1;1;.331;0;0" keyTimes="0;.12;.55;.9;1" dur="10s" repeatCount="indefinite"/><path pathLength="1" d="M110 285C300 275 500 245 705 205" stroke="url(#c-r)" stroke-width="16"/><path pathLength="1" d="M110 285C300 275 500 245 705 205" stroke="#D8231E" stroke-width="2"/></g>
+<g><animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyPoints="0;0;.669;1;1" keyTimes="0;.12;.55;.9;1" path="M110 285C300 275 500 245 705 205"/><use href="#c-fb" transform="scale(.95)" color="#D8231E"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.5;.56;.93;1" dur="10s" repeatCount="indefinite"/><use href="#c-pe"/><circle cx="509" cy="240" r="16" fill="none" stroke="#D8231E" stroke-width="2"><animate attributeName="r" values="16;48;48" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0;0" dur="1.8s" repeatCount="indefinite"/></circle></g>
+</g>
+<g class="cr" fill="none">
+<path d="M110 440C260 436 420 330 705 70" stroke="url(#c-x)" stroke-width="16"/><path d="M110 440C260 436 420 330 705 70" stroke="#141413" stroke-width="2"/>
+<path d="M110 285C300 275 500 245 705 205" stroke="url(#c-r)" stroke-width="16"/><path d="M110 285C300 275 500 245 705 205" stroke="#D8231E" stroke-width="2"/>
+<use href="#c-pe"/>
+<use href="#c-tk" transform="translate(450 286.2) rotate(-37) scale(.95)" color="#141413"/>
+<use href="#c-fb" transform="translate(580 228.2) rotate(-9.9) scale(.95)" color="#D8231E"/>
+</g>
+</svg>

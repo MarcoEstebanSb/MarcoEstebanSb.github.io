@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análisis e implementación del modelo LTL — Caso de estudio</title>
+<meta name="description" content="Análisis de cambio de proveedor de transporte y de modelo de camión dedicado en un distribuidor mayorista ferretero del sureste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+
+<aside class="rail">
+  <div class="progress" data-progress><div class="progress__fill" data-progress-fill></div></div>
+
+  <div class="stack" data-stack>
+    <div class="slot slot--prev" data-slot="prev">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <span class="slot__title" data-title></span>
+      </div>
+    </div>
+    <div class="slot slot--main" data-slot="main">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <h2 class="slot__title" data-title></h2>
+      </div>
+    </div>
+    <div class="slot slot--next" data-slot="next">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <span class="slot__title" data-title></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail__foot">
+    <button type="button" class="iconbtn" aria-label="Volver al inicio" data-top>&#8592;</button>
+  </div>
+</aside>
+
+<main>
+
+  <section class="block" data-block="1">
+    <div class="card" data-card="1">
+      <div class="sheet cover">
+        <span class="rule"></span>
+        <h1 class="cover__title">Se tercerizó las devoluciones de <span class="accent">un almacén</span> y se comprobó, mediante el mismo modelo de costos, que en los otros dos era  <span class="accent">más rentable</span> mantener la operación propia</h1>
+        <p class="prose">Rediseño y tercerización mediante un proveedor de transporte de la logística inversa de un distribuidor mayorista con CEDIS y tres almacenes.</p>
+        <figure class="art">
+          <img src="../assets/svg/c-huellas-tinta.svg"
+            alt="Ilustración animada del proyecto"
+            data-art>
+          <figcaption class="art__hint">Ilustración vectorial del proyecto</figcaption>
+        </figure>
+        <div class="ticker">
+          <div class="ticker__track" data-ticker>
+            <span>Distribuidor mayorista ferretero</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>CEDIS y 3 almacenes</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>2026</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>Proyecto de Residencia Profesional</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>Bajo el apoyo del Director de Transformación</span><span class="sep" aria-hidden="true">&bull;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="2">
+    <div class="card" data-card="2">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">Cada quince días, una unidad propia salía del centro de distribución hacia el almacén con mercancía y volvía cargada con las devoluciones acumuladas. Ese regreso no estaba costeado. Cada auxiliar armaba las tarimas a su criterio y el envío salía cuando el camión estaba disponible. Así había operado durante años, sin incidencias que llamaran la atención.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="3">
+    <div class="card" data-card="3">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">El regreso del camión nunca tuvo partida propia: se diluía en el gasto de distribución, de modo que la operación con unidades propias carecía de un precio con qué compararse. Sobre la mesa había una propuesta de tercerización que no se podía aceptar ni rechazar con evidencia. A eso se sumaban un embalaje sin criterio único, expuesto al rechazo del transportista en el andén, y la falta de indicadores para evaluar el proceso o al proveedor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="4">
+    <div class="card" data-card="4">
+      <div class="sheet">
+        <span class="dot"></span>
+        <blockquote class="quote">
+          <span>“La decisión no era tercerizar o no: era en cuál almacén y desde cuántas tarimas.”</span>
+        </blockquote>
+        <p class="prose prose--after">Ese giro, de una elección única para toda la red a una decisión por almacén y por volumen, dió claridad para tomar una decisión.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="5">
+    <div class="card" data-card="5">
+      <div class="fitbox">
+        <div class="fittrack">
+          <div class="sheet sheet--wide rm" data-fit="900">
+           <div style="margin-bottom:44px">
+            <h2 style="font-size:46px; font-weight:300; line-height:1.15; margin:0"></h2><h2 style="font-size: 52px; line-height: 1.05; margin: 0px; letter-spacing: -0.01em;">ROADMAP<span style="color: rgb(216, 35, 30);">.</span></h2>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#8A8A80; margin-top:8px">LOGÍSTICA INVERSA · 8 SPRINTS</div>
+          </div>
+
+          <div style="display:flex; flex-direction:column">
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#D8231E; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">01</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+              <div style="max-width:520px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Diagnóstico</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Entrevisté al personal de devoluciones y tracé el flujo operativo con unidades propias.</p>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:44px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">02</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+                <div style="max-width:520px; padding-top:14px">
+                  <div style="font-size:26px; font-weight:500">Rediseño</div>
+                  <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Flujo en notación BPMN y responsabilidades por puesto en diagrama de calles.</p>
+                </div>
+              </div>
+
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:88px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">03</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+                <div style="max-width:476px; padding-top:14px">
+                  <div style="font-size:26px; font-weight:500">Estandarización</div>
+                  <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Manuales de Paletizado Perfecto y Recolecciones Perfectas, capacitados en el almacén.</p>
+                </div>
+              </div>
+
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:132px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">04</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+              <div style="max-width:432px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Medición</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Base de datos de envíos y tablero que calcula los indicadores solo.</p>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:88px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">05</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+              <div style="max-width:476px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Análisis</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Costo del transporte propio contra el tercerizado, almacén por almacén.</p>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:44px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">06</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+              <div style="max-width:520px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Decisión</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Viable únicamente en el almacén 1; piloto autorizado en ese punto.</p>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1C1C1A; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:16px; font-weight:500">07</div>
+                <div style="width:2px; flex:1; min-height:44px; background:repeating-linear-gradient(#D8231E 0 6px, transparent 6px 12px)"></div>
+              </div>
+              <div style="max-width:520px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Implementación</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Arranque de recolecciones tercerizadas en el almacén 1, no en los otros dos.</p>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns:120px 1fr; column-gap:28px; align-items:start; margin-left:44px">
+              <div style="display:flex; flex-direction:column; align-items:center; align-self:stretch">
+                <div style="width:88px; height:88px; border-radius:50%; background:#D8231E; color:#FFFDF9; display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:20px; font-weight:500">08</div>
+              </div>
+              <div style="max-width:520px; padding-top:14px">
+                <div style="font-size:26px; font-weight:500">Seguimiento</div>
+                <p style="font-size:16px; line-height:1.8; color:#5A5A54; margin:8px 0 0">Cuatro envíos medidos; el único eslabón incumplido no dependía de la empresa.</p>
+              </div>
+            </div>
+
+            <div class="crit">
+              <div class="crit__tag">
+                <span class="rule"></span>
+                <span class="mono mono--accent">Punto crítico</span>
+              </div>
+              <p class="crit__text">El costo del transporte con unidad propia frente al del transportista tercerizado replanteó la intención inicial del proyecto. Tercerizar sale más barato solo por debajo de <span class="figure">6.18 tarimas</span> en el almacén 1, y de <span class="figure">2.26</span> en el almacén 2 y el almacén 3. El almacén 1 mueve <span class="figure">2 tarimas</span> por semana y se mantiene siempre por debajo de su límite; el almacén 2 y el almacén 3 envían <span class="figure"> 6 tarimas</span> y lo rebasan siempre. El objetivo inicial era tercerizar en los tres almacenes: la evidencia propuso uno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="6">
+    <div class="card" data-card="6">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">El proceso opera bajo el flujo documentado en notación BPMN y un diagrama de calles que asigna cada actividad a un puesto. El auxiliar de bodega embala conforme al manual de Paletizado Perfecto, lo que sostiene la aceptación de la carga en el andén; el auxiliar administrativo interno genera las guías y programa las recolecciones como indica el manual de Recolecciones Perfectas. Los indicadores se calculan de forma automatizada en un dashboard que la empresa opera. Ante la apertura de un almacén nuevo, el modelo de punto de equilibrio devuelve la decisión con el volumen de ese mismo almacén.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="7">
+      <div class="card" data-card="7">
+        <div id="1b" style="flex: 0 0 1020px; background: #FAF8F4; border-radius: 32px; padding: 72px 56px; display: flex; flex-direction: column; gap: 44px;">
+          <div style="display: flex; align-items: baseline; gap: 14px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em; color: #D8231E; border: 1px solid #D8231E; border-radius: 999px; padding: 6px 14px;">DASHBOARD</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #8A8A80;">KPI's OPERATIVOS</span>
+          </div>
+           <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 44px; flex-wrap: wrap;">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+               <h2 style="margin: 0; font-size: 46px; font-weight: 300; color: #1C1C1A;">Resultados del proyecto</h2>
+            </div>
+            <div style="display: flex; align-items: center; gap: 28px; width: 931px; height: 158px">
+              <div style="border-radius: 28px; background: #1C1C1A; padding: 36px 36px; display: flex; flex-direction: column; gap: 4px; min-width: 260px; width: 424px; height: 200px">
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #8A8A80;">ÉXITO DEL PROYECTO</span>
+                 <span style="font-size: 52px; font-weight: 500; color: #FFFDF9; line-height: 1.1;">75%</span>
+                <span style="font-size: 14px; line-height: 1.8; color: #C9C9C0;">Cumplimiento del proceso completo, del embalaje a la llegada al CEDIS.</span>
+              </div>
+               <p style="margin: 0; max-width: 600px; font-size: 16px; line-height: 1.8; color: #55554F; width: 400px; height: 89px">Tres indicadores en 100%. La brecha está en la última milla: la llegada al centro de distribución.</p>
+             </div>
+           </div>
+
+           <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 28px;">
+            <div style="border-radius: 28px; background: #EFEADF; padding: 44px 36px; display: flex; flex-direction: column; gap: 28px; min-height: 260px">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px;">
+                <span style="font-size: 26px; font-weight: 500; color: #1C1C1A;">Paletizado perfecto</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #8A8A80;">001</span>
+              </div>
+              <span style="font-size: 52px; font-weight: 300; color: #1C1C1A; line-height: 1;">100%</span>
+              <div style="height: 10px; border-radius: 999px; background: #E4DFD2; overflow: hidden;"><div style="width: 100%; height: 100%; border-radius: 999px; background: #1C1C1A;"></div></div>
+              <span style="font-size: 16px; line-height: 1.8; color: #55554F;">Mide el nivel de estandarización del embalaje. Evita rechazos.</span>
+            </div>
+
+            <div style="border-radius: 28px; background: #EFEADF; padding: 44px 36px; display: flex; flex-direction: column; gap: 28px; min-height: 260px;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px;">
+                <span style="font-size: 26px; font-weight: 500; color: #1C1C1A;">Recolección perfecta</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #8A8A80;">002</span>
+              </div>
+              <span style="font-size: 52px; font-weight: 300; color: #1C1C1A; line-height: 1;">100%</span>
+              <div style="height: 10px; border-radius: 999px; background: #E4DFD2; overflow: hidden;"><div style="width: 100%; height: 100%; border-radius: 999px; background: #1C1C1A;"></div></div>
+              <span style="font-size: 16px; line-height: 1.8; color: #55554F;">Mide el cumplimiento interno para solicitar las recolecciones en la plataforma del proveedor. Evita sobrecostos.</span>
+            </div>
+
+            <div style="border-radius: 28px; background: #EFEADF; padding: 44px 36px; display: flex; flex-direction: column; gap: 28px; min-height: 260px;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px;">
+                <span style="font-size: 26px; font-weight: 500; color: #1C1C1A;">OTP · Recolección a tiempo</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #8A8A80;">003</span>
+              </div>
+              <span style="font-size: 52px; font-weight: 300; color: #1C1C1A; line-height: 1;">100%</span>
+              <div style="height: 10px; border-radius: 999px; background: #E4DFD2; overflow: hidden;"><div style="width: 100%; height: 100%; border-radius: 999px; background: #1C1C1A;"></div></div>
+              <span style="font-size: 16px; line-height: 1.8; color: #55554F;">Mide la llegada de la unidad de transporte del proveedor en el día programado en el almacén.</span>
+            </div>
+
+            <div style="border-radius: 28px; background: #F6DDDB; padding: 44px 36px; display: flex; flex-direction: column; gap: 28px; min-height: 260px;">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px;">
+                <span style="font-size: 26px; font-weight: 500; color: #1C1C1A;">OTD · Entrega a tiempo</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; color: #A81813;">004</span>
+              </div>
+              <span style="font-size: 52px; font-weight: 300; color: #D8231E; line-height: 1;">75%</span>
+              <div style="height: 10px; border-radius: 999px; background: #E4DFD2; overflow: hidden;"><div style="width: 75%; height: 100%; border-radius: 999px; background: #D8231E;"></div></div>
+              <span style="font-size: 16px; line-height: 1.8; color: #55554F;">Mide la llegada de la unidad de transporte del proveedor en el día programado en el centro de distribución.</span>
+            </div>
+        </div>
+        <p class="prose prose--close">El modelo de tercerización de transporte en la logística inversa se implementó en el almacén 1 porque el costo fijo de operar con unidades propias era mayor que el costo variable de transportar con un proveedor tercerizado. El volumen real en el almacén 1 es de 2 tarimas mientras que el punto de equilibrio es igual a 4.11 tarimas, por debajo de este punto conviene tercerizar. En el almacén 2 y almacén 3, el volumen real es de 6 tarimas mientras que el punto de equilibrio es igual a 3.30 tarimas, en este caso, el costo fijo de operar con unidades propias es menor que tercerizar el transporte con un proveedor logístico.</p>
+      </div>
+  </section>
+
+  <section class="block" data-block="8">
+    <div class="card" data-card="8">
+      <div class="sheet sheet--wide">
+        <div class="eyebrow">
+          <span class="rule"></span>
+          <span class="mono">Gráfico 01</span>
+        </div>
+        <h2 style="font-size: 26px; font-weight: 500; margin: 0 0 44px; text-transform: uppercase">Almacén 1</h2>
+      
+        <div id="1c" style="width: 880px; padding: 44px; padding-left: 1px; padding-right: 20px; display: grid; grid-template-columns: 1fr 260px; gap: 44px; align-items: start; background-color: var(--papel)">
+            <div>
+              <svg viewBox="0 0 720 600" style="width: 100%; height: auto; display: block; overflow: visible;">
+                <path d="M90 478 L301.5 347 L90 347 Z" fill="var(--lino)"></path>
+                <line x1="90" y1="60" x2="90" y2="520" stroke="#1C1C1A" stroke-width="1"></line>
+                <line x1="90" y1="520" x2="712" y2="520" stroke="#1C1C1A" stroke-width="1"></line>
+
+                <line x1="90" y1="347" x2="690" y2="347" stroke="#1C1C1A" stroke-width="3"></line>
+                <line x1="22" y1="520" x2="690" y2="107" stroke="#8A8A80" stroke-width="3"></line>
+
+                <line x1="301.5" y1="347" x2="301.5" y2="520" stroke="#D8231E" stroke-width="1"></line>
+                <rect x="288.5" y="334" width="26" height="26" fill="#D8231E"></rect>
+                <text x="301.5" y="315" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#D8231E">4.11</text>
+                <text x="301.5" y="548" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#D8231E">EQUILIBRIO</text>
+
+                <circle cx="158" cy="436" r="8" fill="#1C1C1A"></circle>
+                <line x1="158" y1="436" x2="158" y2="520" stroke="#1C1C1A" stroke-width="1" stroke-dasharray="3 5"></line>
+                <text x="158" y="410" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#1C1C1A">2.0</text>
+                <text x="158" y="548" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#1C1C1A">HOY</text>
+
+                <text x="90" y="46" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#8A8A80">COSTO</text>
+                <text x="712" y="500" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#8A8A80">VOLUMEN · TARIMAS</text>
+                <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8A80" text-anchor="middle">
+                  <text x="90" y="578">1</text><text x="158" y="578">2</text><text x="226" y="578">3</text><text x="294" y="578">4</text><text x="362" y="578">5</text>
+                  <text x="430" y="578">6</text><text x="498" y="578">7</text><text x="566" y="578">8</text><text x="634" y="578">9</text><text x="702" y="578">10</text>
+                </g>
+              </svg>
+            </div>
+
+            <div style="border-left: 3px solid #D8231E; padding-left: 28px; padding-right: 2px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .18em; color: #8A8A80; margin-bottom: 14px;">LEYENDA</div>
+              <div style="display: grid; gap: 28px;">
+               <div>
+                <svg width="40" height="10" style="display: block; margin-bottom: 8px;"><line x1="0" y1="5" x2="40" y2="5" stroke="#1C1C1A" stroke-width="3"></line></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">FIJO</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">Operación propia</div>
+              </div>
+              <div>
+                <svg width="40" height="14" style="display: block; margin-bottom: 8px;"><line x1="0" y1="12" x2="40" y2="2" stroke="#8A8A80" stroke-width="3"></line></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">VARIABLE</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">Costo por tarima</div>
+              </div>
+              <div>
+                <svg width="16" height="16" style="display: block; margin-bottom: 8px;"><rect width="16" height="16" fill="#D8231E"></rect></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em; color: #D8231E;">EQUILIBRIO</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">4.11 tarimas</div>
+              </div>
+              <div>
+                <svg width="16" height="16" style="display: block; margin-bottom: 8px;"><circle cx="8" cy="8" r="7" fill="#1C1C1A"></circle></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">VOLUMEN REAL</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">2 tarimas</div>
+              </div>
+              </div>
+            <div style="margin-top: 44px; padding-top: 14px; border-top: 1px solid rgba(28,28,26,.18); font-size: 14px; line-height: 1.6; color: #3A3A36;">El área sombreada es el rango donde tercerizar cuesta menos.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="9">
+    <div class="card" data-card="9">
+      <div class="sheet sheet--wide">
+        <div class="eyebrow">
+          <span class="rule"></span>
+          <span class="mono">Gráfico 02</span>
+        </div>
+        <h2 style="font-size: 26px; font-weight: 500; margin: 0 0 44px; text-transform: uppercase">Almacén 2 y Almacén 3</h2>
+
+
+        <div id="1c" style="width: 880px; padding: 44px; padding-left: 1px; padding-right: 20px; display: grid; grid-template-columns: 1fr 260px; gap: 44px; align-items: start; background-color: var(--papel)">
+          <div>
+            <svg viewBox="0 0 720 600" style="width: 100%; height: auto; display: block; overflow: visible;">
+              <path d="M90 480 L246.4 389 L90 389 Z" fill="var(--lino)"></path>
+              <line x1="90" y1="60" x2="90" y2="520" stroke="#1C1C1A" stroke-width="1"></line>
+              <line x1="90" y1="520" x2="712" y2="520" stroke="#1C1C1A" stroke-width="1"></line>
+
+              <line x1="90" y1="389" x2="690" y2="389" stroke="#1C1C1A" stroke-width="3"></line>
+              <line x1="90" y1="480" x2="690" y2="130" stroke="#8A8A80" stroke-width="3"></line>
+
+              <line x1="246.4" y1="389" x2="246.4" y2="520" stroke="#D8231E" stroke-width="1"></line>
+              <rect x="233.4" y="376" width="26" height="26" fill="#D8231E"></rect>
+              <text x="246.4" y="357" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#D8231E">3.30</text>
+              <text x="246.4" y="548" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#D8231E">EQUILIBRIO</text>
+
+              <circle cx="430" cy="282" r="8" fill="#1C1C1A"></circle>
+              <line x1="430" y1="282" x2="430" y2="520" stroke="#1C1C1A" stroke-width="1" stroke-dasharray="3 5"></line>
+              <text x="430" y="256" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="500" fill="#1C1C1A">6.0</text>
+              <text x="430" y="548" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#1C1C1A">HOY</text>
+
+              <text x="90" y="46" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#8A8A80">COSTO</text>
+              <text x="712" y="500" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2" fill="#8A8A80">VOLUMEN · TARIMAS</text>
+              <g font-family="'JetBrains Mono', monospace" font-size="10" fill="#8A8A80" text-anchor="middle">
+              <text x="90" y="578">1</text><text x="158" y="578">2</text><text x="226" y="578">3</text><text x="294" y="578">4</text><text x="362" y="578">5</text>
+              <text x="430" y="578">6</text><text x="498" y="578">7</text><text x="566" y="578">8</text><text x="634" y="578">9</text><text x="702" y="578">10</text>
+              </g>
+            </svg>
+          </div>
+
+          <div style="border-left: 3px solid #D8231E; padding-left: 28px;">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .18em; color: #8A8A80; margin-bottom: 14px;">LEYENDA</div>
+            <div style="display: grid; gap: 28px;">
+              <div>
+                <svg width="40" height="10" style="display: block; margin-bottom: 8px;"><line x1="0" y1="5" x2="40" y2="5" stroke="#1C1C1A" stroke-width="3"></line></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">FIJO</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">Operación propia</div>
+              </div>
+              <div>
+                <svg width="40" height="14" style="display: block; margin-bottom: 8px;"><line x1="0" y1="12" x2="40" y2="2" stroke="#8A8A80" stroke-width="3"></line></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">VARIABLE</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">Costo por tarima</div>
+              </div>
+              <div>
+                <svg width="16" height="16" style="display: block; margin-bottom: 8px;"><rect width="16" height="16" fill="#D8231E"></rect></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em; color: #D8231E;">EQUILIBRIO</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">3.30 tarimas</div>
+              </div>
+              <div>
+                <svg width="16" height="16" style="display: block; margin-bottom: 8px;"><circle cx="8" cy="8" r="7" fill="#1C1C1A"></circle></svg>
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em;">VOLUMEN REAL</div>
+                <div style="font-size: 14px; line-height: 1.6; color: #3A3A36;">6 tarimas</div>
+              </div>
+            </div>
+            <div style="margin-top: 44px; padding-top: 14px; border-top: 1px solid rgba(28,28,26,.18); font-size: 14px; line-height: 1.6; color: #3A3A36;">El área sombreada es el rango donde tercerizar cuesta menos.</div>
+          </div>
+        </div>          
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="10">
+    <div class="card" data-card="10">
+      <div class="sheet sheet--dark">
+        <div class="conf__meta">
+          <span class="rule"></span>
+          <span class="mono mono--soft">Confidencialidad</span>
+        </div>
+        <p class="conf__text">Datos reales protegidos. Caso anonimizado por confidencialidad.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

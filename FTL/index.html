@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambio de proveedor de transporte — Caso de estudio</title>
+<meta name="description" content="Análisis de cambio de proveedor de transporte y de modelo de camión dedicado en un distribuidor mayorista ferretero del sureste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="layout">
+
+<aside class="rail">
+  <div class="progress" data-progress><div class="progress__fill" data-progress-fill></div></div>
+
+  <div class="stack" data-stack>
+    <div class="slot slot--prev" data-slot="prev">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <span class="slot__title" data-title></span>
+      </div>
+    </div>
+    <div class="slot slot--main" data-slot="main">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <h2 class="slot__title" data-title></h2>
+      </div>
+    </div>
+    <div class="slot slot--next" data-slot="next">
+      <div class="slot__box">
+        <div class="slot__meta"><span class="slot__bar" data-bar></span><span class="slot__num" data-num></span></div>
+        <span class="slot__title" data-title></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail__foot">
+    <button type="button" class="iconbtn" aria-label="Volver al inicio" data-top>&#8592;</button>
+  </div>
+</aside>
+
+<main>
+
+  <section class="block" data-block="1">
+    <div class="card" data-card="1">
+      <div class="sheet cover">
+        <span class="rule"></span>
+        <h1 class="cover__title">Confiabilidad y trazabilidad costaban <span class="accent">16.26%</span> más en toda la red y <span class="accent">0.13%</span> en un solo almacén</h1>
+        <p class="prose">Análisis de cambio de proveedor de transporte y de modelo de camión dedicado en un distribuidor mayorista ferretero del sureste.</p>
+        <figure class="art">
+          <img src="../assets/svg/e-arbol-decision.svg"
+            alt="Ilustración animada del proyecto"
+            data-art>
+          <figcaption class="art__hint">Ilustración vectorial del proyecto</figcaption>
+        </figure>
+        <div class="ticker">
+          <div class="ticker__track" data-ticker>
+            <span>Distribuidor mayorista ferretero</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>CEDIS y 3 almacenes</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>2025</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>Proyecto de Residencia Profesional</span><span class="sep" aria-hidden="true">&bull;</span>
+            <span>Bajo el apoyo del Director de Transformación</span><span class="sep" aria-hidden="true">&bull;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="2">
+    <div class="card" data-card="2">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">El camión del proveedor llegaba tarde al CEDIS o, en ocasiones, no llegaba. La mercancía ya separada se quedaba asentada, el equipo reprogramaba maniobras y lo que salía tarde regresaba como devolución. Nada de eso detenía la operación pero las consecuencias se acumulaban. El proveedor cobraba la tarifa más baja disponible, y por eso el arreglo llevaba años en pie.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="3">
+    <div class="card" data-card="3">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">Ninguna de esas fallas se cargaba al transportista. El sobretiempo caía en mano de obra, la mercancía detenida en costos de inventario y los remanejos en la operación del patio; sin histórico de indicadores, tampoco quedaba registro de los incumplimientos. La consecuencia era una comparación imposible: cualquier cotización de un competidor se veía cara frente a una tarifa que solo mostraba una parte de lo que costaba.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="4">
+    <div class="card" data-card="4">
+      <div class="sheet">
+        <span class="dot"></span>
+        <blockquote class="quote">
+          <span>“La confiabilidad y la trazabilidad no se cotizan, pero siempre se pagan.”</span>
+        </blockquote>
+        <p class="prose prose--after">El proveedor actual las cobraba en fallas que absorbía la empresa; el operador logístico nuevo las cobra en su tarifa y las sostiene con un compromiso operativo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="5">
+    <div class="card" data-card="5">
+      <div class="fitbox">
+        <div class="fittrack">
+          <div class="sheet sheet--wide rm" data-fit="900">
+            <div class="rm__head">
+              <span class="mono">Proceso</span>
+              <span class="rule"></span>
+              <span class="rm__headtitle">Siete sprints, de la entrevista al piloto</span>
+            </div>
+
+            <div class="rm__grid">
+              <div class="sp sp--l r1">
+                <div class="sp__num">SPRINT 01</div>
+                <div class="sp__title">Diagnóstico</div>
+                <p class="sp__text">Entrevistas al personal de operaciones y trazado del flujo hacia los tres almacenes</p>
+              </div>
+              <div class="sp sp--r r2">
+                <div class="sp__num">SPRINT 02</div>
+                <div class="sp__title">Cuantificación</div>
+                <p class="sp__text">Nueve incidencias atribuibles al proveedor actual, costeadas una por una</p>
+              </div>
+              <div class="sp sp--l r3">
+                <div class="sp__num">SPRINT 03</div>
+                <div class="sp__title">Rediseño</div>
+                <p class="sp__text">Modelo de camión dedicado por almacén, documentado en diagrama de calles</p>
+              </div>
+              <div class="sp sp--r r4">
+                <div class="sp__num">SPRINT 04</div>
+                <div class="sp__title">Comparación</div>
+                <p class="sp__text">Costo real del proveedor actual contra tarifa integral del nuevo, almacén por almacén</p>
+              </div>
+              <div class="sp sp--l r5">
+                <div class="sp__num">SPRINT 05</div>
+                <div class="sp__title">Medición</div>
+                <p class="sp__text">Tres indicadores definidos: entregas a tiempo, llegadas de unidad y trazabilidad</p>
+              </div>
+              <div class="sp sp--r r6">
+                <div class="sp__num">SPRINT 06</div>
+                <div class="sp__title">Decisión</div>
+                <p class="sp__text">Viable solo en ALM 1; piloto autorizado por la Dirección</p>
+              </div>
+              <div class="sp sp--l r7">
+                <div class="sp__num sp__num--on">SPRINT 07</div>
+                <div class="sp__title">Piloto</div>
+                <p class="sp__text">Carta porte emitida, ejecución programada y cancelada el mismo día</p>
+              </div>
+
+              <div class="spine">
+                <svg viewBox="0 0 90 1050" fill="none" aria-hidden="true">
+                  <path d="M16,75 C16,150 74,150 74,225 C74,300 16,300 16,375 C16,450 74,450 74,525 C74,600 16,600 16,675 C16,750 74,750 74,825" stroke="#1C1C1A" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"></path>
+                  <path d="M74,825 C74,900 16,900 16,975" stroke="rgba(28,28,26,.45)" stroke-width="1.5" stroke-dasharray="4 6" fill="none" vector-effect="non-scaling-stroke"></path>
+                  <path d="M16,975 L16,1050" stroke="rgba(28,28,26,.45)" stroke-width="1.5" stroke-dasharray="4 6" fill="none" vector-effect="non-scaling-stroke"></path>
+                </svg>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+
+            <div class="crit">
+              <div class="crit__tag">
+                <span class="rule"></span>
+                <span class="mono mono--accent">Punto crítico</span>
+              </div>
+              <p class="crit__text">El costo real del proveedor actual frente a la tarifa integral del proveedor nuevo obligó a replantear el alcance. Existían incidencias atribuibles al transportista, que nunca se le habían cargado, entraron por primera vez en la comparación, y al cuantificarlas la diferencia se redujo a <span class="figure">0.13%</span> en el almacén 1, frente a <span class="figure">21.27%</span> en el almacén 3 y <span class="figure">22.79%</span> en el almacén 2. El objetivo inicial era cambiar de proveedor en los tres almacenes, el análisis respaldó uno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="6">
+    <div class="card" data-card="6">
+      <div class="sheet">
+        <span class="rule rule--lead"></span>
+        <p class="prose">La empresa opera con el proveedor original, pero ya no a ciegas: el costo de sus fallas está cuantificado a su ruta. El flujo del modelo de camión dedicado está documentado en diagrama de calles, con responsable por actividad y carta de instrucciones redactada por almacén. Ante cualquier cotización nueva, el modelo de costo total resuelve la comparación con los datos de la propia ruta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="7">
+    <div class="card" data-card="7">
+      <div class="sheet sheet--wide">
+        <div class="res__head">
+          <div class="res__headline">
+            <span class="mono">Cierre</span>
+            <span class="rule"></span>
+            <span class="res__title">Resultados del análisis</span>
+          </div>
+          <span class="mono mono--tight res__unit">Aumento porcentual</span>
+        </div>
+
+        <div class="res__grid">
+          <div class="metric">
+            <div>
+              <div class="metric__label">ALMACÉN 01</div>
+              <div class="metric__name">ALM 1</div>
+            </div>
+            <dl class="spec">
+              <div><dt>Piloto</dt><dd>Autorizado</dd></div>
+              <div><dt>Ejecución</dt><dd>No se ejecutó</dd></div>
+            </dl>
+            <div class="metric__value">+0.13<small>%</small></div>
+          </div>
+
+          <div class="metric">
+            <div>
+              <div class="metric__label">ALMACÉN 02</div>
+              <div class="metric__name">ALM 2</div>
+            </div>
+            <dl class="spec">
+              <div><dt>Piloto</dt><dd>Fuera</dd></div>
+              <div><dt>Motivo</dt><dd>Costo no justificado</dd></div>
+            </dl>
+            <div class="metric__value">+22.79<small>%</small></div>
+          </div>
+
+          <div class="metric">
+            <div>
+              <div class="metric__label">ALMACÉN 03</div>
+              <div class="metric__name">ALM 3</div>
+            </div>
+            <dl class="spec">
+              <div><dt>Piloto</dt><dd>Fuera</dd></div>
+              <div><dt>Motivo</dt><dd>Costo no justificado</dd></div>
+            </dl>
+            <div class="metric__value">+21.27<small>%</small></div>
+          </div>
+
+          <div class="metric metric--dark">
+            <div>
+              <div class="metric__label">CONSOLIDADO</div>
+              <div class="metric__name">Red completa</div>
+            </div>
+            <dl class="spec spec--plain">
+              <div><dt>Alcance</dt><dd>3 almacenes</dd></div>
+              <div><dt>Restricción</dt><dd>Salida del CEDIS</dd></div>
+            </dl>
+            <div class="metric__value">+16.26<small>%</small></div>
+          </div>
+        </div>
+
+        <p class="prose prose--close">El piloto quedó autorizado solo en el almacén 1 y no llegó a ejecutarse: el día programado, el proveedor nuevo informó que carecía de permiso para salir del CEDIS en el horario requerido. La única salida era recorrer los horarios de entrega, y el ajuste no se limitaba a ese punto: la restricción estaba en la salida, así que alcanzaba a los tres almacenes. Ninguno podía absorberlo, porque llegar a tiempo era precisamente lo que se estaba pagando de más. Los almacenes 2 y 3 quedaron fuera porque la diferencia de costo no los justificaba, y la restricción de horario los alcanzaba igual que al primero.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="8">
+    <div class="card" data-card="8">
+      <div class="sheet sheet--wide">
+        <div class="eyebrow">
+          <span class="rule"></span>
+          <span class="mono">Gráfico 01</span>
+        </div>
+        <h2 class="chart__title">Representación porcentual del costo total por transportista</h2>
+
+        <div class="chart">
+          <div class="chart__main">
+            <div class="axis-y"><span class="mono">Costo (%)</span></div>
+            <div class="plot">
+              <div class="bars">
+                <div class="bar">
+                  <div class="seg seg--light" style="height:137px">31.1%</div>
+                  <div class="seg-gap"></div>
+                  <div class="seg seg--mid" style="height:202px">45.8%</div>
+                  <div class="seg-gap"></div>
+                  <div class="seg seg--dark" style="height:102px">23.1%</div>
+                </div>
+                <div class="bar">
+                  <div class="seg seg--light" style="height:113px">29.8%</div>
+                  <div class="seg-gap"></div>
+                  <div class="seg seg--mid" style="height:164px">43.4%</div>
+                  <div class="seg-gap"></div>
+                  <div class="seg seg--dark" style="height:101px">26.8%</div>
+                </div>
+              </div>
+              <div class="axis-x"></div>
+              <div class="ticks">
+                <div class="tick"><i></i><span>Nuevo</span></div>
+                <div class="tick"><i></i><span>Actual</span></div>
+              </div>
+              <div class="axis-x-label mono">Proveedor</div>
+            </div>
+          </div>
+
+          <div class="chart__side">
+            <div class="legend">
+              <div class="legend__title mono">Almacén</div>
+              <ul>
+                <li><span class="sw sw--1"></span>Alm 1</li>
+                <li><span class="sw sw--2"></span>Alm 2</li>
+                <li><span class="sw sw--3"></span>Alm 3</li>
+              </ul>
+            </div>
+            <p class="note">Cada barra es un transportista y vale el 100% del costo de transporte; los tres segmentos que la componen son los almacenes. La comparación no está entre las barras sino entre los segmentos: cuánto del costo absorbe cada almacén con un transportista y con el otro. Los segmentos apenas varían porcentualmente pero varían en tamaño de una barra a la otra. La estructura porcentual de los costos se reparte de forma parecida pero el total del costo cambia de un transportista a otro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="9">
+    <div class="card" data-card="9">
+      <div class="sheet sheet--wide sheet--crema">
+        <div class="eyebrow">
+          <span class="rule"></span>
+          <span class="mono">Gráfico 02</span>
+        </div>
+        <h2 class="chart__title">Aumento porcentual del costo por almacén</h2>
+
+        <div class="chart">
+          <div class="radar">
+            <svg viewBox="0 0 700 640" fill="none">
+              <polygon points="580,310 205,93.5 205,526.5" fill="#F1EFE9" stroke="none" stroke-linejoin="round"></polygon>
+              <polygon points="518.5,310 235.8,146.8 235.8,473.2" fill="#F5F2EC" stroke="none"></polygon>
+              <polygon points="455,310 267.5,201.8 267.5,418.2" fill="#FAF8F4" stroke="none"></polygon>
+              <polygon points="391.5,310 299.3,256.7 299.3,363.3" fill="#FFFDF9" stroke="none"></polygon>
+              <polygon points="534.9,310 227.6,132.6 227.6,487.4" fill="none" stroke="#1C1C1A" stroke-width="1.5" stroke-dasharray="6 6"></polygon>
+              <path d="M535.1,310 Q376.8,181.4 204.2,92.1 Q182.4,308.5 205.7,525.3 Q377.7,437 535.1,310 Z" fill="none" stroke="#D8231E" stroke-width="2.5" stroke-linejoin="round"></path>
+              <circle cx="535.1" cy="310" r="5" fill="#FFFDF9" stroke="#D8231E" stroke-width="2.5"></circle>
+              <circle cx="204.2" cy="92.1" r="5" fill="#FFFDF9" stroke="#D8231E" stroke-width="2.5"></circle>
+              <circle cx="205.7" cy="525.3" r="5" fill="#FFFDF9" stroke="#D8231E" stroke-width="2.5"></circle>
+            </svg>
+            <span class="pill" style="left:76.4%;top:43.4%">0.1%</span>
+            <span class="pill" style="left:29.3%;top:9.4%">22.8%</span>
+            <span class="pill" style="left:29.3%;top:87.2%">21.3%</span>
+            <span class="vlabel vlabel--mid" style="left:89%;top:49.4%">ALM 1</span>
+            <span class="vlabel" style="left:25.4%;top:3.5%">ALM 2</span>
+            <span class="vlabel" style="left:25.4%;top:94.5%">ALM 3</span>
+          </div>
+
+          <div class="chart__side">
+            <div class="legend">
+              <div class="legend__title mono">Transportista</div>
+              <ul>
+                <li><span class="sw sw--line"></span>Nuevo</li>
+                <li><span class="sw sw--dash"></span>Actual</li>
+              </ul>
+            </div>
+            <p class="note">Cada vértice es un almacén y cada triángulo un transportista. Lo que importa no es el tamaño de las figuras sino la separación entre ellas: en cada vértice, esa distancia es lo que cuesta cambiar de transportista en ese almacén. En un almacén los dos triángulos casi se tocan; en los otros dos se despegan. La prueba piloto se autorizó donde se tocan y se descartó donde se separan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" data-block="10">
+    <div class="card" data-card="10">
+      <div class="sheet sheet--dark">
+        <div class="conf__meta">
+          <span class="rule"></span>
+          <span class="mono mono--soft">Confidencialidad</span>
+        </div>
+        <p class="conf__text">Datos reales protegidos. Caso anonimizado por confidencialidad.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
