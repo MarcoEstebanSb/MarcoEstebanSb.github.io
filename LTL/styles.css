@@ -560,3 +560,575 @@ img, svg { display: block; max-width: 100%; }
 .art img{
   object-fit: cover;
 }
+
+/* ==========================================================
+   RESPONSIVE LAYER — segunda hoja de caso de estudio
+   Escritorio, tablet y móvil.
+   ========================================================== */
+
+:root {
+  --text-d2: clamp(2rem, 3.2vw, 2.875rem);
+  --text-h2: clamp(1.25rem, 2vw, 1.625rem);
+  --text-h3: clamp(1.2rem, 1.8vw, 1.4375rem);
+  --text-metric: clamp(2rem, 3vw, 2.625rem);
+  --text-body-size: clamp(0.9375rem, 1.1vw, 1rem);
+  --space-4: clamp(1.125rem, 2vw, 1.75rem);
+  --space-5: clamp(1.5rem, 3vw, 2.75rem);
+  --space-6: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
+.layout {
+  grid-template-columns: minmax(260px, 28%) minmax(0, 1fr);
+}
+
+.block {
+  min-width: 0;
+  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.25rem, 4.5vw, 4rem);
+}
+
+.card {
+  min-width: 0;
+  border-radius: clamp(16px, 2vw, 26px);
+  padding: clamp(12px, 2vw, 20px);
+}
+
+.sheet {
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.sheet--wide {
+  padding: clamp(1.25rem, 3.5vw, 2.75rem);
+}
+
+.fitbox {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.art {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.rm {
+  width: 100%;
+  max-width: 900px;
+}
+
+.rm__grid {
+  width: 100%;
+  min-width: 0;
+}
+
+.chart {
+  align-items: flex-start;
+}
+
+.chart__main {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.chart__side {
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
+.plot {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.bars,
+.ticks {
+  width: max-content;
+  min-width: 100%;
+}
+
+.bar,
+.tick {
+  flex: 0 0 clamp(100px, 14vw, 170px);
+}
+
+.radar {
+  width: 100%;
+  min-width: 0;
+}
+
+.vlabel,
+.pill {
+  max-width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tablet y portátiles compactas */
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: minmax(230px, 30%) minmax(0, 1fr);
+  }
+
+  .rail {
+    padding: 40px clamp(18px, 3vw, 32px);
+  }
+
+  .progress {
+    left: clamp(18px, 3vw, 32px);
+    right: clamp(18px, 3vw, 32px);
+  }
+
+  .block {
+    padding: 30px clamp(18px, 3vw, 34px);
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: clamp(20px, 3vw, 34px);
+  }
+
+  .rm__grid {
+    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+    column-gap: 18px;
+  }
+
+  .spine {
+    width: 64px;
+  }
+
+  .spine svg {
+    width: 64px;
+  }
+
+  .plot {
+    padding-left: 20px;
+  }
+
+  .bars,
+  .ticks {
+    gap: 28px;
+  }
+}
+
+/* Tablet vertical */
+@media (max-width: 860px) {
+  .layout {
+    display: block;
+  }
+
+  .rail {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 28px clamp(20px, 5vw, 40px);
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    justify-content: flex-start;
+  }
+
+  .rail .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .stack {
+    width: 100%;
+    gap: 0;
+  }
+
+  .slot--prev,
+  .slot--next {
+    display: none;
+  }
+
+  .slot__box {
+    padding: clamp(16px, 3vw, 22px);
+  }
+
+  .slot__title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .rail__foot {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .block {
+    min-height: auto;
+    padding: clamp(22px, 5vw, 36px);
+    align-items: flex-start;
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: clamp(20px, 4vw, 32px);
+  }
+
+  .res__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .res__head {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .rm__grid {
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .spine {
+    width: 54px;
+  }
+
+  .spine svg {
+    width: 54px;
+  }
+
+  .chart {
+    gap: 28px;
+  }
+
+  .chart__main,
+  .chart__side {
+    flex-basis: 100%;
+  }
+
+  .bars {
+    height: clamp(280px, 55vw, 420px);
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .rail {
+    padding: 22px 16px;
+  }
+
+  .slot__box {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .slot__meta {
+    margin-bottom: 10px;
+  }
+
+  .slot__title {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .block {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 9px;
+    border-radius: 17px;
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: 19px 14px;
+    border-radius: 14px;
+  }
+
+  .cover {
+    gap: 22px;
+  }
+
+  .cover__title {
+    font-size: clamp(1.15rem, 5vw, 1.4rem);
+  }
+
+  .art {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .eyebrow {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .prose {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .quote span {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+
+  /* Roadmap vertical, legible y sin columnas comprimidas. */
+  .rm__head {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 24px;
+  }
+
+  .rm__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .spine {
+    display: none;
+  }
+
+  .sp {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 0 24px 20px;
+    margin-left: 4px;
+    border-left: 1px solid var(--border);
+    position: relative;
+  }
+
+  .sp::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    background: var(--accent);
+  }
+
+  .sp--l,
+  .sp--r {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sp__title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .sp__text {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .crit {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 18px;
+  }
+
+  .crit__text {
+    font-size: 14px;
+  }
+
+  /* Resultados */
+  .res__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .res__headline {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .res__title {
+    font-size: clamp(2rem, 10vw, 2.875rem);
+  }
+
+  .res__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .metric {
+    min-height: 165px;
+    padding: 19px;
+  }
+
+  .metric__name {
+    font-size: 20px;
+  }
+
+  .metric__value {
+    font-size: clamp(2rem, 9vw, 2.625rem);
+  }
+
+  .spec {
+    max-width: 100%;
+  }
+
+  /* Gráficos con desplazamiento interno cuando sea necesario. */
+  .chart__title {
+    font-size: 21px;
+  }
+
+  .chart {
+    gap: 22px;
+    margin-top: 22px;
+  }
+
+  .chart__main {
+    grid-template-columns: 20px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .axis-y .mono {
+    font-size: 9px;
+  }
+
+  .plot {
+    padding-left: 12px;
+  }
+
+  .bars {
+    height: 280px;
+    gap: 16px;
+  }
+
+  .bar,
+  .tick {
+    flex-basis: 100px;
+  }
+
+  .seg {
+    font-size: 11px;
+  }
+
+  .ticks {
+    gap: 16px;
+  }
+
+  .tick span {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .axis-x {
+    margin-top: 18px;
+  }
+
+  .axis-x-label {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .legend {
+    padding-left: 14px;
+  }
+
+  .legend li,
+  .note {
+    font-size: 14px;
+  }
+
+  .radar {
+    flex-basis: 100%;
+    max-width: 420px;
+  }
+
+  .pill {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+
+  .vlabel {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .conf__meta {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .conf__text {
+    font-size: clamp(19px, 5.5vw, 23px);
+  }
+}
+
+/* Móviles estrechos */
+@media (max-width: 380px) {
+  .block {
+    padding: 13px 9px;
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: 15px 11px;
+  }
+
+  .slot__title {
+    font-size: 1.8rem;
+  }
+
+  .art {
+    aspect-ratio: 1 / 1;
+  }
+
+  .bars {
+    height: 245px;
+    gap: 13px;
+  }
+
+  .bar,
+  .tick {
+    flex-basis: 88px;
+  }
+
+  .ticks {
+    gap: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

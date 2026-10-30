@@ -554,3 +554,619 @@ img, svg { display: block; max-width: 100%; }
 .art img{
   object-fit: cover;
 }
+
+/* ==========================================================
+   RESPONSIVE LAYER
+   Adaptación para escritorio, tablet y móvil.
+   Se conservan los estilos y la identidad visual originales.
+   ========================================================== */
+
+/* Base fluida: evita que el contenido fuerce el ancho del viewport. */
+:root {
+  --text-d2: clamp(2rem, 3.2vw, 2.875rem);
+  --text-h2: clamp(1.25rem, 2vw, 1.625rem);
+  --text-h3: clamp(1.2rem, 1.8vw, 1.4375rem);
+  --text-metric: clamp(2rem, 3vw, 2.625rem);
+  --text-body-size: clamp(0.9375rem, 1.1vw, 1rem);
+  --space-4: clamp(1.125rem, 2vw, 1.75rem);
+  --space-5: clamp(1.5rem, 3vw, 2.75rem);
+  --space-6: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+*, *::before, *::after {
+  min-width: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.layout {
+  grid-template-columns: minmax(260px, 28%) minmax(0, 1fr);
+}
+
+.block,
+.card,
+.sheet,
+.fitbox,
+.cover,
+.chart {
+  min-width: 0;
+}
+
+.block {
+  padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.25rem, 4.5vw, 4rem);
+}
+
+.card {
+  border-radius: clamp(16px, 2vw, 26px);
+}
+
+.sheet {
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.sheet--wide {
+  padding: clamp(1.25rem, 3.5vw, 2.75rem);
+}
+
+.art {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Roadmap: el ancho deja de ser fijo. */
+.rm {
+  width: 100%;
+  max-width: 900px;
+}
+
+.rm__grid {
+  width: 100%;
+}
+
+/* Gráficos: permiten reducir el contenido sin romper el layout. */
+.chart {
+  align-items: flex-start;
+}
+
+.chart__main {
+  flex: 1 1 420px;
+  min-width: 0;
+}
+
+.chart__side {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.plot {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.bars,
+.ticks {
+  width: max-content;
+  min-width: 100%;
+}
+
+.bar,
+.tick {
+  flex: 0 0 clamp(100px, 14vw, 170px);
+}
+
+.radar {
+  width: 100%;
+  min-width: 0;
+}
+
+.vlabel,
+.pill {
+  max-width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: minmax(230px, 30%) minmax(0, 1fr);
+  }
+
+  .rail {
+    padding: 42px clamp(18px, 3vw, 32px);
+  }
+
+  .progress {
+    left: clamp(18px, 3vw, 32px);
+    right: clamp(18px, 3vw, 32px);
+  }
+
+  .block {
+    padding: 32px clamp(20px, 3vw, 36px);
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: clamp(22px, 3vw, 36px);
+  }
+
+  .rm__grid {
+    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+    column-gap: 18px;
+  }
+
+  .spine {
+    width: 64px;
+  }
+
+  .spine svg {
+    width: 64px;
+  }
+
+  .bars {
+    gap: 28px;
+  }
+
+  .ticks {
+    gap: 28px;
+  }
+
+  .plot {
+    padding-left: 20px;
+  }
+}
+
+/* ---------- Tablet vertical y móviles ---------- */
+@media (max-width: 860px) {
+  .layout {
+    display: block;
+  }
+
+  .rail {
+    position: relative;
+    top: auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 30px clamp(20px, 5vw, 40px);
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    justify-content: flex-start;
+  }
+
+  .rail .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  .stack {
+    width: 100%;
+    gap: 0;
+  }
+
+  .slot--prev,
+  .slot--next {
+    display: none;
+  }
+
+  .slot__box {
+    padding: clamp(16px, 3vw, 22px);
+  }
+
+  .slot__title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.12;
+  }
+
+  .rail__foot {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .block {
+    min-height: auto;
+    padding: clamp(22px, 5vw, 36px);
+    align-items: flex-start;
+  }
+
+  .card {
+    padding: clamp(14px, 2.5vw, 22px);
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: clamp(20px, 4vw, 32px);
+  }
+
+  .res__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .res__head {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .rm {
+    max-width: 100%;
+  }
+
+  .rm__grid {
+    grid-template-columns: minmax(0, 1fr) 54px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .sp__title {
+    font-size: clamp(16px, 2vw, 19px);
+  }
+
+  .sp__text {
+    font-size: 13px;
+  }
+
+  .spine {
+    width: 54px;
+  }
+
+  .spine svg {
+    width: 54px;
+  }
+
+  .chart {
+    gap: 28px;
+  }
+
+  .chart__main {
+    flex-basis: 100%;
+  }
+
+  .chart__side {
+    flex-basis: 100%;
+  }
+
+  .bars {
+    height: clamp(280px, 55vw, 420px);
+  }
+
+  .bar,
+  .tick {
+    flex-basis: 120px;
+  }
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .rail {
+    padding: 24px 18px;
+  }
+
+  .slot__box {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .slot__meta {
+    margin-bottom: 10px;
+  }
+
+  .slot__title {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
+  }
+
+  .block {
+    padding: 18px 14px;
+  }
+
+  .card {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .cover {
+    gap: 22px;
+  }
+
+  .cover__title {
+    font-size: clamp(1.15rem, 5vw, 1.4rem);
+  }
+
+  .art {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+  }
+
+  .ticker span {
+    font-size: 9px;
+    padding-right: 18px;
+  }
+
+  .eyebrow {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .prose {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .prose--close {
+    margin-top: 36px;
+  }
+
+  .quote span {
+    font-size: clamp(20px, 5.5vw, 24px);
+  }
+
+  /* Roadmap en una sola columna para evitar textos comprimidos. */
+  .rm__head {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    margin-bottom: 26px;
+  }
+
+  .rm__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .spine {
+    display: none;
+  }
+
+  .sp {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 0 26px 20px;
+    margin-left: 4px;
+    border-left: 1px solid var(--border);
+    position: relative;
+  }
+
+  .sp::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    background: var(--accent);
+  }
+
+  .sp--l,
+  .sp--r {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sp__num {
+    margin-bottom: 6px;
+  }
+
+  .sp__title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .sp__text {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .crit {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 18px;
+  }
+
+  .crit__text {
+    font-size: 14px;
+  }
+
+  /* Resultados y métricas. */
+  .res__head {
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .res__headline {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  .res__title {
+    font-size: clamp(2rem, 10vw, 2.875rem);
+  }
+
+  .res__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .metric {
+    min-height: 170px;
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .metric__name {
+    font-size: 20px;
+  }
+
+  .metric__value {
+    font-size: clamp(2rem, 9vw, 2.625rem);
+  }
+
+  .spec {
+    max-width: 100%;
+  }
+
+  /* Gráficos: el área de barras puede desplazarse sin ensanchar la página. */
+  .chart__title {
+    font-size: 21px;
+  }
+
+  .chart {
+    gap: 24px;
+    margin-top: 22px;
+  }
+
+  .chart__main {
+    grid-template-columns: 20px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .axis-y .mono {
+    font-size: 9px;
+  }
+
+  .plot {
+    padding-left: 12px;
+  }
+
+  .bars {
+    height: 290px;
+    gap: 18px;
+  }
+
+  .bar,
+  .tick {
+    flex-basis: 104px;
+  }
+
+  .seg {
+    font-size: 11px;
+  }
+
+  .ticks {
+    gap: 18px;
+  }
+
+  .tick span {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .axis-x {
+    margin-top: 18px;
+  }
+
+  .axis-x-label {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+
+  .chart__side {
+    gap: 20px;
+  }
+
+  .legend {
+    padding-left: 14px;
+  }
+
+  .legend li,
+  .note {
+    font-size: 14px;
+  }
+
+  .radar {
+    flex-basis: 100%;
+    max-width: 420px;
+  }
+
+  .pill {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+
+  .vlabel {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .conf__meta {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .conf__text {
+    font-size: clamp(19px, 5.5vw, 23px);
+  }
+}
+
+/* ---------- Móviles estrechos ---------- */
+@media (max-width: 380px) {
+  .block {
+    padding: 14px 10px;
+  }
+
+  .sheet,
+  .sheet--wide {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .slot__title {
+    font-size: 1.8rem;
+  }
+
+  .art {
+    aspect-ratio: 1 / 1;
+  }
+
+  .bars {
+    height: 250px;
+    gap: 14px;
+  }
+
+  .bar,
+  .tick {
+    flex-basis: 88px;
+  }
+
+  .ticks {
+    gap: 14px;
+  }
+}
+
+/* Respeta la preferencia del usuario por movimiento reducido. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
